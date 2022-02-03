@@ -7,16 +7,5 @@ metadata:
   namespace: rhacm-gitops-ns
 spec:
   type: Git
-  pathname: 'https://gitlab.consulting.redhat.com/gps-laboratory/gpslab-rhacm-gitops.git'
-  secretRef:
-    name: rhacm-gitops-auth
+  pathname: 'https://github.com/achieris/gitops-rhacm-argocd.git'
   insecureSkipVerify: true
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: rhacm-gitops-auth
-  namespace: rhacm-gitops-ns
-data:
-  user: Z2l0bGFiK2RlcGxveS10b2tlbi0xODMK
-  accessToken: Uzl6YTItamdvLW95LWJNVTh2dXUK
