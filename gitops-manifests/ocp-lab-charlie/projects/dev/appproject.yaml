@@ -6,13 +6,6 @@ metadata:
   labels:
     app.kubernetes.io/part-of: argocd-ocp-lab-charlie
 spec:
-  clusterResourceBlacklist:
-    - group: ''
-      kind: ClusterRole
-    - group: ''
-      kind: ClusterRoleBinding
-    - group: ''
-      kind: ResourceQuota
   clusterResourceWhitelist:
     - group: ''
       kind: Namespace
