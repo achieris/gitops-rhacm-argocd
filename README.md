@@ -58,3 +58,4 @@ To use this repo you need to have in your enviroment:
   * Channel namespaces
   * Policy for: 
     * OpenShift GitOps Operator installation, needed cluster role binding and namespace openshift-gitops creation;
+    * Compliance checks on namespaces. 
