@@ -6,6 +6,9 @@ metadata:
   labels:
     app.kubernetes.io/part-of: argocd
 spec:
+  clusterResourceWhitelist:
+    - group: ''
+      kind: Namespace
   clusterResourceBlacklist:
     - group: ''
       kind: ClusterRole
