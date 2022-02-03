@@ -1,0 +1,6 @@
+- op: replace
+  path: /metadata/namespace
+  value: rhacm-gitops-ns-ocp-lab-charlie
+- op: replace
+  path: /spec/secretRef/name
+  value: rhacm-gitops-auth-ocp-lab-charlie
