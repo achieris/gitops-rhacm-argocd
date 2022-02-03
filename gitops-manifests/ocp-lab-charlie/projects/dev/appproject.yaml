@@ -26,6 +26,6 @@ spec:
         - admin
       name: syncer
       policies:
-        - 'p, proj:nginx:syncer, applications, sync, nginx/*, allow'
+        - 'p, proj:nginx:syncer, applications, sync, dev/*, allow'
   sourceRepos:
     - '*'
