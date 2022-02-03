@@ -63,3 +63,25 @@ spec:
                 spec:
                   finalizers:
                     - kubernetes
+            - complianceType: musthave
+              objectDefinition:
+                apiVersion: argoproj.io/v1alpha1
+                kind: ArgoCD
+                metadata:
+                  name: openshift-gitops
+                  namespace: openshift-gitops
+                spec:
+                  resourceExclusions: |
+                    - apiGroups:
+                      - tekton.dev
+                      clusters:
+                      - '*'
+                      kinds:
+                      - TaskRun
+                      - PipelineRun
+                    - apiGroups:
+                      - '*'
+                      clusters:
+                      - '*'
+                      kinds:
+                      - Namespace                      
