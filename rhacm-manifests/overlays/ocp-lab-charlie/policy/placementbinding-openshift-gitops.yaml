@@ -4,10 +4,10 @@ metadata:
   name: openshift-gitops-placementbinding
   namespace: openshift-gitops
 placementRef:
-  name: openshift-gitops-placementrule-lab02
+  name: openshift-gitops-placementrule-ocp-lab-charlie
   kind: PlacementRule
   apiGroup: apps.open-cluster-management.io
 subjects:
-  - name: openshift-gitops-installed-lab02
+  - name: openshift-gitops-installed-ocp-lab-charlie
     kind: Policy
     apiGroup: policy.open-cluster-management.io
