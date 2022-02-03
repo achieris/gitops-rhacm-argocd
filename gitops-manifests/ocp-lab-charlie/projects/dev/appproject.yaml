@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: dev 
+  namespace: openshift-gitops
+  labels:
+    app.kubernetes.io/part-of: argocd
+spec:
+  clusterResourceBlacklist:
+    - group: ''
+      kind: ClusterRole
+    - group: ''
+      kind: ClusterRoleBinding
+    - group: ''
+      kind: ResourceQuota
+  destinations:
+    - namespace: '*'
+      server: '*'
+  namespaceResourceBlacklist:
+    - group: network.openshift.io
+      kind: EgressNetworkPolicy
+    - group: ''
+      kind: ResourceQuota
+  roles:
+    - groups:
+        - admin
+      name: syncer
+      policies:
+        - 'p, proj:nginx:syncer, applications, sync, nginx/*, allow'
+  sourceRepos:
+    - '*'
