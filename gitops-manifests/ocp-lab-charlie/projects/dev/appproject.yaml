@@ -1,14 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: dev 
+  name: dev
   namespace: openshift-gitops
   labels:
-    app.kubernetes.io/part-of: argocd
+    app.kubernetes.io/part-of: argocd-ocp-lab-charlie
 spec:
-  namespaceResourceWhitelist:
-    - group: ''
-      kind: Namespace
   clusterResourceBlacklist:
     - group: ''
       kind: ClusterRole
@@ -16,8 +13,12 @@ spec:
       kind: ClusterRoleBinding
     - group: ''
       kind: ResourceQuota
+  clusterResourceWhitelist:
+    - group: ''
+      kind: Namespace
   destinations:
-    - namespace: '*'
+    - name: in-cluster
+      namespace: '*'
       server: '*'
   namespaceResourceBlacklist:
     - group: network.openshift.io
