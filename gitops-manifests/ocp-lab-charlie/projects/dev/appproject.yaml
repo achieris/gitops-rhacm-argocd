@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/part-of: argocd
 spec:
-  clusterResourceWhitelist:
+  namespaceResourceWhitelist:
     - group: ''
       kind: Namespace
   clusterResourceBlacklist:
@@ -29,6 +29,6 @@ spec:
         - admin
       name: syncer
       policies:
-        - 'p, proj:nginx:syncer, applications, sync, dev/*, allow'
+        - 'p, proj:dev:syncer, applications, sync, dev/*, allow'
   sourceRepos:
     - '*'
