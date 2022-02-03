@@ -11,3 +11,6 @@ subjects:
   - name: openshift-gitops-installed-ocp-lab-mike
     kind: Policy
     apiGroup: policy.open-cluster-management.io
+  - name: project-compliance-ocp-lab-charlie
+    kind: Policy
+    apiGroup: policy.open-cluster-management.io

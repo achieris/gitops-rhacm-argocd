@@ -22,8 +22,9 @@ spec:
           namespaceSelector:
             exclude:
               - kube-*
+              - open*
             include:
-              - default
+              - "*"
           object-templates:
             - complianceType: musthave
               objectDefinition:
