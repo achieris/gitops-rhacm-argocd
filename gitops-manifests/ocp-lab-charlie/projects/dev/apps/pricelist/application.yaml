@@ -5,7 +5,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: app-workshop
+    namespace: pricelist
     server: 'https://kubernetes.default.svc'
   project: dev
   source:
