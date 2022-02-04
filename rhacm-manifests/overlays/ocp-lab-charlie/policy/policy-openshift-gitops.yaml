@@ -86,6 +86,6 @@ spec:
                       kinds:
                       - Namespace   
                       - EgressNetworkPolicy
-                      - ResouceQuota
+                      - ResourceQuota
                       - NetworkPolicy
                       - LimitRange
