@@ -85,4 +85,7 @@ spec:
                       - '*'
                       kinds:
                       - Namespace   
-                
+                      - EgressNetworkPolicy
+                      - ResouceQuota
+                      - NetworkPolicy
+                      - LimitRange

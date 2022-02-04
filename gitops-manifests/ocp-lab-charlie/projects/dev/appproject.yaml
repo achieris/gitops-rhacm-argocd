@@ -13,11 +13,6 @@ spec:
     - name: in-cluster
       namespace: '*'
       server: '*'
-  namespaceResourceBlacklist:
-    - group: network.openshift.io
-      kind: EgressNetworkPolicy
-    - group: ''
-      kind: ResourceQuota
   roles:
     - groups:
         - admin
